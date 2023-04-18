@@ -1,25 +1,29 @@
-import express,{Request, Response} from "express";
-import mustache from "mustache-express";
-import mainrouter from "./router/index";
+import express ,{Request,Response} from 'express';
+import dotenv from 'dotenv';
+import mustache from 'mustache-express';
 import path from "path";
-import dotenv from "dotenv"
-
+import router from './router/index';
+import {conectMongo} from './instances/mongo';
 dotenv.config();
+conectMongo();
 const server = express();
-/* adicionando  templete html com mustache */
-server.set('view engine','mustache')
-server.set('views', path.join(__dirname,'views'));
-server.engine('mustache', mustache());
-/*voltar um diretorio */
-server.use(express.static(path.join(__dirname, '../public')))
-/*permitindo que o servidor pegue dados internos da url */
-server.use(express.urlencoded({extended:true}))
-
-server.use(mainrouter)
-server.use((req:Request,res:Response)=>{
-    res.status(404).send("pagina nao encontrada")
+//permissoes as pasta via mustache
+server.set("view engine", "mustache");
+server.set("views",path.join(__dirname,"views"));
+server.engine("mustache", mustache());
+server.use(express.static(path.join(__dirname,"../public")));
+server.use(express.urlencoded({extended: true}));
+//rotas
+server.use(router);
+server.use((req: Request, res: Response)=>{
+    res.status(404).send("PAGINA NÃO ENCONTRADA")
 });
+//porta server
+server.listen(process.env.PORT,()=>{
+    try {
+        console.log("servidor rodando");
+    }catch(erro){
+        console.log("servidor off",erro);
 
-server.listen(3000,()=>{
-    console.log("servidor on")
-})
+    }
+});

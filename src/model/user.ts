@@ -1,4 +1,4 @@
-import {Model,DataTypes} from "sequelize";
+/*import {Model,DataTypes} from "sequelize";
 import {sequelize} from "../instances/database";
 export interface userInstances extends Model{
     id:number;
@@ -41,3 +41,4 @@ export const User = sequelize.define<userInstances>("User",{
     timestamps:false
 }
 )
+*/

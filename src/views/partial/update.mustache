@@ -1,0 +1,31 @@
+
+            <div class="cidade"> 
+                  <form method="get">    
+                      {{#use}}    
+                                <label for="">CIDADE</label>
+                                <div class="registre"><input type="text" name="cidade" value="{{cidade}}"/></div>
+                                <label for="">RUA</label>
+                                <div class="registre"><input type="text" name="rua" value="{{rua}}"/></div>
+                                <label for="">IMPRESSORA</label>
+                                <div class="registre"><input type="text" name="impressora"value="{{impressora}}"/></div>
+                                <label for="">CODE</label>
+                                <div class="registre"><h3><input type="text" name="code" value="{{code}}"/></div>
+                           </div>
+                           <div class="rua">
+                             
+                                <label for="">IP</label>
+                                <div class="registre"><input type="text" name="ip" value="{{ip}}"/></div>
+                                <label for="">MODELO</label>
+                                <div class="registre"><input type="text" name="modelo" value="{{modelo}}"/></div>
+                                <label for="">STATUS</label>
+                                <select class="registre" name="status" for="option" id="opc">
+                                     <option value="{{status}}">em manutenção</option>
+                                     <option value="status">funcionando</option>
+                              </select>
+                                <!---
+                                <button class="sc-s">envar</button>
+                                 -->
+                                 <button class="sc-s">enviar</button>
+                           </div>
+                         {{/use}}
+                  </form>

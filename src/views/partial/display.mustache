@@ -1,20 +1,23 @@
+                         {{#use}}
                            <div class="cidade2">
                                 <label for="">CIDADE</label>
-                                <div class="name"><h3>{{cidade}}j</h3></div>
+                                <div class="name"><h3>{{cidade}}</h3></div>
                                 <label for="">RUA</label>
-                                <div class="name"><h3>{{rua}}j</h3></div>
+                                <div class="name"><h3>{{rua}}</h3></div>
                                 <label for="">IMPRESSORA</label>
-                                <div class="name"><h3>{{impressora}}n</h3></div>
+                                <div class="name"><h3>{{impressora}}</h3></div>
                                 <label for="">CODE</label>
                                 <div class="name"><h3>{{code}}</h3></div>
+                                 <button class="exc">excluir</button>
                            </div>
                            <div class="ruas">
                                 <label for="">IP</label>
-                                <div class="name">{{#use}}<h3>{{ip}}{{/use}}</h3></div>
+                                <div class="name"><h3>{{ip}}</h3></div>
                                 <label for="">MODELO</label>
                                 <div class="name"><h3>{{modelo}}</h3></div>
                                 <label for="">STATUS</label>
                                 <div class="name"><h3>{{status}}</h3></div>
                                 <label for="">CONFIGURAÇÃO</label>
-                                <div class="name"><a href="1http://92.168.100.29"><h3>acessar</h3></a></div>
+                                <div class="name a"><a href="http://{{ip}}"><h3>acessar</h3></a></div>
                             </div>
+                         {{/use}}
