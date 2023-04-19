@@ -1,4 +1,4 @@
-import { Schema, model, Model, connection, ObjectId } from "mongoose";
+import { Schema, model, Model, connection} from "mongoose";
 type UserType = {
     cidade: string,
     rua: string,
@@ -17,8 +17,7 @@ const schema = new Schema<UserType>({
     code:String,
     ip:String,
     modelo:String,
-    status: Boolean
-   
+    status:{type:Boolean, required:true}
   });
 
 const modelName: string = 'impressora';

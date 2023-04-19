@@ -59,10 +59,10 @@ export const registre = async(req:Request,res:Response)=>{
     return;
 }
 export const search = async (req:Request, res:Response)=>{
-    let nane = req.query.list;
+    let code = req.query.list;
     
     let use = await mongoose.findOne({
-      code:nane
+      code
 })
 console.log(use)
     res.render("pages/search",{
@@ -77,18 +77,29 @@ export const excluir = async(req:Request,res:Response)=>{
     res.redirect("/");
 };
 export const atualize = async(req:Request,res:Response)=>{
-    let li = req.query.lis
-    console.log(li)
-    const use = await mongoose.findOneAndUpdate(
-        {
-            code:li
+    let nane = req.query.lis;
+      let  alert = "atualizando dados..."
+    const use = await mongoose.findOne({
+         code:nane
+        })
+        if(use===use){
+            let {cidade,rua,impressora,code,ip,modelo,status} = req.query;
+            await mongoose.updateMany(
+                {cidade,rua,impressora,code,ip,modelo,status}
+            )
+            res.render("pages/update",{
+                use
+            });
+            return
+
         }
-    )
-    res.render("pages/update",{
-        use
-    })
+        
 }
 export const exclui = async(req:Request,res:Response)=>{
     res.render("pages/home",{
+    })
+}
+export const bal = async(req:Request,res:Response)=>{
+    res.render("pages/balanca",{
     })
 }

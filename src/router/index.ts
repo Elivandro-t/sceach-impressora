@@ -7,6 +7,7 @@ route.get("/registrar",controls.registre);
 route.get("/update",controls.atualize)
 route.delete("",controls.exclui)
 route.get("/",controls.home)
+route.get("/balancas",controls.bal)
 /*
 route.get("/")
 */
