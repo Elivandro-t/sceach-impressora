@@ -6,8 +6,7 @@ type UserType = {
     code:string,
     ip:string,
     modelo:string,
-    status:boolean
-
+    status:boolean,
 };
 
 const schema = new Schema<UserType>({
@@ -17,7 +16,8 @@ const schema = new Schema<UserType>({
     code:String,
     ip:String,
     modelo:String,
-    status:{type:Boolean, required:true}
+    status:{type:Boolean, required:true},
+    
   });
 
 const modelName: string = 'impressora';

@@ -1,19 +1,21 @@
-import console from 'console';
 import {Request,Response} from 'express';
 import mongoose from "../model/users";
-export const home = async(req:Request,res:Response)=>{
+export const home = (req:Request,res:Response)=>{
     res.render("pages/home",{
     })
 }
 
 export const registre = async(req:Request,res:Response)=>{
-    
-    if(req.query.code&&req.query.code&&req.query.ip){
-        let {cidade,rua,impressora,code,ip,modelo,status} = req.query;
-        let use = await mongoose.findOne({
-            rua,code,impressora,ip,
+    if(req.body.code&&req.body.code&&req.body.ip&&req.body.ip){
+        let erro = "criada com sucesso!"
+        let code = req.body.code;
+
+        const use = await mongoose.findOne({
+            code
         })
+        let errou = "impressora já existe"
         if(!use){
+            let {cidade,rua,impressora,code,ip,modelo,status} = req.body;
              await mongoose.create({
                 cidade,
                 rua,
@@ -26,10 +28,15 @@ export const registre = async(req:Request,res:Response)=>{
             }
             );
         }else{
-              console.log("impressora ja está criada")
-              return res.redirect("/registrar")
+             res.render("pages/erro",{
+                errou
+            })
+           return;
         }
-        console.log("nada enviado")
+        res.render("pages/erro",{
+            erro
+        })
+        return
      }
 
     /*
@@ -54,12 +61,11 @@ export const registre = async(req:Request,res:Response)=>{
       use
     })
     */
-    res.render("pages/create"
-    )
+   res.render("pages/create")
     return;
 }
 export const search = async (req:Request, res:Response)=>{
-    let code = req.query.list;
+    let code = req.body.list;
     
     let use = await mongoose.findOne({
       code
@@ -71,19 +77,20 @@ console.log(use)
     )
 }
 export const excluir = async(req:Request,res:Response)=>{
-    let id: string = req.params.id;
-    const result = await mongoose.findByIdAndDelete({id});
+    let id  = req.params.code
+    console.log("meu codigo",id)
+    await mongoose.findOneAndDelete({id});
     
-    res.redirect("/");
 };
 export const atualize = async(req:Request,res:Response)=>{
-    let nane = req.query.lis;
+
+    let nane = req.body.lis;
       let  alert = "atualizando dados..."
     const use = await mongoose.findOne({
          code:nane
         })
         if(use===use){
-            let {cidade,rua,impressora,code,ip,modelo,status} = req.query;
+            let {cidade,rua,impressora,code,ip,modelo,status} = req.body;
             await mongoose.updateMany(
                 {cidade,rua,impressora,code,ip,modelo,status}
             )
@@ -93,11 +100,10 @@ export const atualize = async(req:Request,res:Response)=>{
             return
 
         }
+
         
 }
 export const exclui = async(req:Request,res:Response)=>{
-    res.render("pages/home",{
-    })
 }
 export const bal = async(req:Request,res:Response)=>{
     res.render("pages/balanca",{

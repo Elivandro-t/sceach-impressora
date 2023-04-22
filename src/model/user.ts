@@ -1,44 +1,24 @@
-/*import {Model,DataTypes} from "sequelize";
+import {Model,DataTypes} from "sequelize";
 import {sequelize} from "../instances/database";
 export interface userInstances extends Model{
     id:number;
-    cidade: string;
-    rua:string;
-    impressora:string;
-    status:boolean;
-    modelo:string;
-    ip:string;
-    code:number;
+    password:number
+    user:string
 }
 export const User = sequelize.define<userInstances>("User",{
     id:{
         primaryKey:true,
         type:DataTypes.INTEGER
     },
-    cidade:{
+    user:{
         type:DataTypes.STRING
     },
-    rua:{
-        type:DataTypes.STRING
-    },
-    impressora:{
-        type:DataTypes.STRING
-    },
-    status:{
-        type:DataTypes.BOOLEAN
-    },
-    modelo:{
-        type:DataTypes.STRING
-    },
-    ip:{
-        type:DataTypes.STRING
-    },
-    code:{
+    password:{
         type:DataTypes.INTEGER
     }
+    
 },{
-    tableName:"impressora",
+    tableName:"users",
     timestamps:false
 }
 )
-*/

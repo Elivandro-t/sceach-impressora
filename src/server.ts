@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mustache from 'mustache-express';
 import path from "path";
 import router from './router/index';
+import routers from './router/rout';
 import {conectMongo} from './instances/mongo';
 import cors from "cors"
 dotenv.config();
@@ -19,6 +20,7 @@ server.use(Express.static(path.join(__dirname,"../public")));
 server.use(Express.urlencoded({extended:true}));
 //rotas
 server.use(router);
+server.use(routers);
 server.use((req: Request, res: Response)=>{
     res.status(404).send("PAGINA NÃO ENCONTRADA")
 });

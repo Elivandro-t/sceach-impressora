@@ -2,6 +2,12 @@
                 <!--topo do site-->
                           <div class="display-open n">
                              <!--display-->
+                             {{#erro}}
+                             <p>{{erro}}</p>
+                             {{/erro}}
+                             {{#errou}}
+                             <p>{{errou}}</p>
+                             {{/errou}}
                              {{>partial/registre}}
                           </div>
 {{>partial/foother}}

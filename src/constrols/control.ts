@@ -1,35 +1,39 @@
-/*import {Request,Response} from "express";
+import {Request,Response} from "express";
 import {User} from '../model/user';
-export const home = async(req:Request,res:Response)=>{
-      
-    res.render("pages/home");
-    return;
-}
-export const registre = async(req:Request,res:Response)=>{
-    /*
-     let city = req.query.cidade;
-     let ruas = req.query.rua;
-     let imp = req.query.impressora
-     let cod = req.query.code
-     let ips = req.query.ip;
-     let modelos = req.query.modelo
-     let statu = req.query.status
-     await User.create({
-        cidade: city,
-        rua:ruas,
-        impressora:imp,
-        code: cod,
-        ip:ips,
-        modelo:modelos,
-        status:statu
-        
-     })
+import JWT from "jsonwebtoken"
+import { json } from "sequelize";
+export const login = async(req:Request,res:Response)=>{
+        if(req.body.listal&&req.body.lista){
+            let user = req.body.listal
+            let password = req.body.lista
+            let hasuser = await User.findOne({where:{user,password}});
+            if(!hasuser){
+                 JWT.sign(
+                    {user:user.user,password:user.user},
+                    process.env.JWTKEY_VER as string,
+                )
+            }else{
+                console.log("enviada pra car")
+            }
+         }
+         res.render("pages/userTela",{
+        })
+    
+};
 
-     res.render("pages/create")
-}
-export const atualize = async (req:Request,res:Response)=>{
-    res.render("pages/update");
-}
+
+export const atualiz = async (req:Request,res:Response)=>{
+    let uses = req.body.listal;
+    let password = req.body.lista;
+    const us = await User.findOne({
+        where:{user:uses}
+    });
+    if(!us){
+        await User.create({user:uses,password});
+    }
+    res.render("pages/new");
+};
+/*
 export const exclui = (req:Request,res:Response)=>{
     res.render("");
 }
