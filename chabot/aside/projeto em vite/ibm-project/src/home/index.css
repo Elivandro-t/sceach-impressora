@@ -1,0 +1,29 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+
+}
+.topo-area{
+    height:3rem;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: aliceblue;
+   background-color: #242442;
+}
+.top-left{
+    flex:1;
+}
+.top-right{
+    width:100px;
+    display: flex;
+    align-items:center;
+   
+}
+.user-count{
+    width:50px;
+}

@@ -1,0 +1,28 @@
+.names1{
+    background-color: #8aadee;
+    border:2px solid #272323;
+}
+.namess{
+    background-color: #dee4e6;
+   
+}
+.td{
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tb{
+    color: rgb(37, 78, 139);
+}
+.dados-lista{
+    width: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    color: #8aadee;
+}

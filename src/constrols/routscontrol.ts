@@ -9,7 +9,6 @@ export const registre = async(req:Request,res:Response)=>{
     if(req.body.code&&req.body.code&&req.body.ip&&req.body.ip){
         let erro = "criada com sucesso!"
         let code = req.body.code;
-
         const use = await mongoose.findOne({
             code
         })
@@ -85,7 +84,6 @@ export const excluir = async(req:Request,res:Response)=>{
 export const atualize = async(req:Request,res:Response)=>{
 
     let nane = req.body.lis;
-      let  alert = "atualizando dados..."
     const use = await mongoose.findOne({
          code:nane
         })
@@ -100,7 +98,6 @@ export const atualize = async(req:Request,res:Response)=>{
             return
 
         }
-
         
 }
 export const exclui = async(req:Request,res:Response)=>{

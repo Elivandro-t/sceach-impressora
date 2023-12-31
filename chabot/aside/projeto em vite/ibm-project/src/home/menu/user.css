@@ -1,0 +1,67 @@
+/* styles.css */
+
+.account-menu {
+    position: absolute;
+    display: inline-block;
+  }
+  
+  .account-menu-button {
+   
+    border: none;
+    cursor: pointer;
+    text-align:center;
+
+   
+ 
+  }
+  .name-logued{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+  .name-user{
+    margin-right: 10px;
+  }
+  .account-menu-dropdown {
+    list-style: none;
+    width:200px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top:180%;
+    right: 0;
+    background-color: #1b3f5c;
+    border: 1px solid #d18f8f;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-menu-dropdown li {
+    padding: 8px 16px;
+  }
+  
+  .account-menu-dropdown li a {
+    text-decoration: none;
+    color: #d6c1c1;
+    display: block;
+  }
+  
+  .account-menu-dropdown li a:hover {
+    background-color: #facbcb;
+  }
+  
+  .account-menu-dropdown li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #eec0c0;
+    padding:8px 16px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .account-menu-dropdown li button:hover {
+    background-color: #f4f4f4;
+  }
+  

@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+.continer-int{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background:linear-gradient(#727ee9,#18151b);
+    height:100vh;
+}
+.logo{
+   margin-top:10px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+.img{
+    position: absolute;
+}
+p{
+    width: 200px;
+    background-color: rgb(148, 143, 137);
+    height: 2px;
+    margin-top:38px;
+   
+  
+}
+.Signin{
+    width:400px;
+    height:270px;
+    border-radius: 5px ;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Signin_int{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.input-login{
+    width: 320px;
+    display: flex;
+    margin:10px;
+}
+.dados-inut{
+    width: 260px;
+    height: 30px;
+    outline: none;
+    border-radius: 2px;
+    background-color: #b894da;
+    border: 0;
+}
+.but{
+    width: 30px;
+    
+}
+.input-senha{
+    display: flex;
+    align-items: center;
+}
+.button-name .buttons{
+    width: 200px;
+    height:35px;
+    border-top-right-radius:100px;
+    border-bottom-left-radius: 100px;
+
+    background-color: rgb(161, 161, 177);
+    cursor:pointer;
+}
+.buttons:hover{
+    background-color: rgb(99, 97, 224);
+    color: aliceblue;
+}

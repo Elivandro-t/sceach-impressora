@@ -1,0 +1,94 @@
+.chamado{
+    display: flex;
+    flex-direction: column;
+    
+
+
+}
+label{
+    font-family: 'Times New Roman', Times, serif;
+    margin:10px;
+    color: #2d8bbb;
+}
+.input_name{
+    display: flex;
+    width:980px;
+   
+    
+}
+
+
+/* desabilitar scrool de numero*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+
+}
+
+.input_names{
+    display: flex;
+   
+}
+.input_dados{
+    height:20px;
+    width: 300px;
+    outline: none;
+    font:inherit;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+.input_dados-area{
+    height:50px;
+    width: 300px;
+    outline:none;
+    resize: none;
+}
+.input_dado{
+    width:500px;
+    height:20px;
+    outline: none;
+}
+.input-2{
+    display: flex;
+    width:416px;
+}
+.input-1{
+    display: flex;
+    width:200px;
+}
+.estrutura{
+    display: flex;
+    flex-direction: column;
+}
+.js{
+    margin-left:35rem;
+    display: flex;
+}
+.button-envio{
+    width:50px;
+}
+.button-dados{
+    height:30px;
+    width:120px;
+    outline: none;
+    font:inherit;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+.label_name{
+    width:80px;
+    display: flex;
+    justify-content: flex-end;
+}
+.tela-exib{
+    width:950px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height:250px;
+}
+.tela-exibe-dados{
+    width:745px;
+    margin: auto;
+    height: 200px;
+    border:1px dotted #888;
+    background-color:field;
+}

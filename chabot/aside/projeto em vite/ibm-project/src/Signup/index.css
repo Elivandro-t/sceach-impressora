@@ -1,0 +1,26 @@
+.alter-password{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(29, 43, 61);
+    margin: auto;
+    margin-top:5rem;
+}
+.input-name-password{
+    width:380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-alter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.name-data{
+    display: flex;
+    
+}

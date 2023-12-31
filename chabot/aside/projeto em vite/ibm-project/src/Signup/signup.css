@@ -1,0 +1,49 @@
+.alter-signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height:380px;
+    background-color: rgb(29, 43, 61);
+    margin: auto;
+    margin-top:5rem;
+    border-radius: 5px;
+    flex-direction: column;
+}
+.logo-signup{
+    height: 50px;
+    color: azure;
+}
+.data{
+  display: flex;
+  width: 350px;
+  display: flex;
+  align-items: center;
+ 
+}
+.input-name-signup{
+    width:380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-alter-signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.name-data-signup{
+    display: flex;
+    margin-right:10px;
+    text-align: center;
+    color: rgb(238, 84, 84);
+    width: 56px;
+    
+}
+.input-dados{
+    width:200px;
+    height:20px;
+    margin-left: 5px;
+    text-align: start;
+}

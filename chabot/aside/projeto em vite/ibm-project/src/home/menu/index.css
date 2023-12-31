@@ -1,0 +1,17 @@
+.menu-left ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+.menu-left li:hover{
+    color: rgb(211, 110, 28);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+a:hover{
+    color: rgb(211, 110, 28);
+}
